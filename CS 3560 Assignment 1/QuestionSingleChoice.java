@@ -13,16 +13,8 @@ class QuestionSingleChoice{
     public void setType(int x){
         this.numOfChoice = x;
     }
-
-    public String getAnswString(String a){
-        return this.question;
-    }
-    public int getType(int x){
+    public int getNumOfChoice(){
         return this.numOfChoice;
-    }
-
-    private String answerChoice(int numOfChoice){
-        
     }
 
     public String toString (){

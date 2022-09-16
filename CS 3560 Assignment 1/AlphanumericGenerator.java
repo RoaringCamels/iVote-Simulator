@@ -13,9 +13,9 @@ public class AlphanumericGenerator{
     return s.toString();
     }
 
-    char ABCDGenerator (){
+    char ABCDGeneratorSC (int x){
         Random r = new Random();
-        char c = (char)(r.nextInt(4) + 'A');
+        char c = (char)(r.nextInt(x) + 'A');
         return c;
     }
 }
