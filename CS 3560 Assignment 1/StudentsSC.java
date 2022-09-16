@@ -14,7 +14,6 @@
     public void setStudentAnswer (String newAnswer){
         this.studentAnswer = newAnswer;
     }
-
     public String getID (){
         return this.ID;
     }

@@ -31,12 +31,18 @@ public class VotingService {
         this.stat = stat;
     }
 
-    public ArrayList<String> poll = new ArrayList<String>();
+    public void letterCounter(String inputString){
+        Map<String, Integer> map = new HashMap<String,Integer>();
 
-    public void add(String a){
-        poll.add(a);
+        for(String i: this.stat){
+            Integer j = map.get(i);
+            map.put(i, (j == null) ? 1: j + 1) ;
+        }
+
+        for(Map.Entry<String, Integer> val:map.entrySet()){
+            System.out.println("Element " + val.getKey() + " " + " was chosen "+ val.getKey() + " times.");
+        }
     }
-
 
     
 }
