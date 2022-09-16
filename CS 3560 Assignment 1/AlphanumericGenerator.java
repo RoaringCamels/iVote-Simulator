@@ -13,10 +13,11 @@ public class AlphanumericGenerator{
     return s.toString();
     }
 
-    char ABCDGeneratorSC (int x){
+    String ABCDGeneratorSC (int x){
         Random r = new Random();
         char c = (char)(r.nextInt(x) + 'A');
-        return c;
+        String s = Character.toString(c);
+        return s;
     }
 
     
