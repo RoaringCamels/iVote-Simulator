@@ -18,5 +18,7 @@ public class AlphanumericGenerator{
         char c = (char)(r.nextInt(x) + 'A');
         return c;
     }
+
+    
 }
 

@@ -1,9 +1,9 @@
  public class StudentsSC {
     
     private String ID;
-    private char studentAnswer;
+    private String studentAnswer;
 
-    public StudentsSC (String newID, char newAnswer){
+    public StudentsSC (String newID, String newAnswer){
         this.ID = newID;
         this.studentAnswer = newAnswer;
     }
@@ -11,14 +11,14 @@
     public void setID (String newID){
         this.ID = newID;
     }
-    public void setStudentAnswer (char newAnswer){
+    public void setStudentAnswer (String newAnswer){
         this.studentAnswer = newAnswer;
     }
 
-    public String getID (String ID){
+    public String getID (){
         return this.ID;
     }
-    public char getStudentAnswer (char answer){
+    public String getStudentAnswer (){
         return this.studentAnswer;
     }
 
