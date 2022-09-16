@@ -12,4 +12,11 @@ public class AlphanumericGenerator{
         }
     return s.toString();
     }
+
+    char ABCDGenerator (){
+        Random r = new Random();
+        char c = (char)(r.nextInt(4) + 'A');
+        return c;
+    }
 }
+
