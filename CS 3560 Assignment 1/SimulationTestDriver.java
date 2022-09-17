@@ -8,7 +8,7 @@ public static void main(String[] args) {
     ArrayList<String> arrList = new ArrayList<String>(); //arraylist object to input for VotingService
 
     //Question with number of choices
-    QuestionSingleChoice q1 = new QuestionSingleChoice("Sushi, KBBQ, Buffet, Blank, Blank and Blank?", 6);
+    QuestionSingleChoice q1 = new QuestionSingleChoice(0,"Sushi, KBBQ, Buffet, Blank, Blank and Blank?", 6);
 
     //object that keeps track of the stats
     VotingService poll = new VotingService(0,q1.getNumOfChoice(),arrList);
@@ -23,7 +23,7 @@ public static void main(String[] args) {
     StudentsSC s7 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumOfChoice()));
     
 
-    System.out.println(q1);
+    System.out.println(q1.print1());
     
     //prints the students id and their answers
     System.out.println(s1+"\n");

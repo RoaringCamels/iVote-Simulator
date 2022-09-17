@@ -2,18 +2,18 @@ import java.util.*;
 
 public class VotingService {
 
-    private int counter;
+    private int type; //0 = SC, 1 = MC
     private int numberOfChoices;
     private ArrayList<String> stat;
 
-    public VotingService(int counter, int numberOfChoices, ArrayList<String> stat){
-        this.counter = counter;
+    public VotingService(int type, int numberOfChoices, ArrayList<String> stat){
+        this.type = type;
         this.numberOfChoices = numberOfChoices;
         this.stat = stat;
     }
 
-    public int getCounter() {
-        return counter;
+    public int getType() {
+        return type;
     }
     public int getNumberOfChoices() {
         return numberOfChoices;
@@ -21,8 +21,8 @@ public class VotingService {
     public ArrayList<String> getStat() {
         return stat;
     }
-    public void setCounter(int counter) {
-        this.counter = counter;
+    public void setType(int counter) {
+        this.type = counter;
     }
     public void setNumberOfChoices(int numberOfChoices) {
         this.numberOfChoices = numberOfChoices;
@@ -40,7 +40,7 @@ public class VotingService {
         }
 
         for(Map.Entry<String, Integer> val:map.entrySet()){
-            System.out.println("Choice " + val.getKey() + " " + " was chosen "+ val.getValue() + " times.");
+            System.out.println("Element " + val.getKey() + " " + " was chosen "+ val.getValue() + " times.");
         }
     }
 
