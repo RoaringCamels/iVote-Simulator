@@ -20,6 +20,11 @@ public class AlphanumericGenerator{
         return s;
     }
 
+    String ABCDGeneratorMC (int x){
+        Random ran = new Random();
+        char
+    }
+
     
 }
 
