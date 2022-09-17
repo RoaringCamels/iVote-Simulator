@@ -24,6 +24,8 @@ public static void main(String[] args) {
     
 
     System.out.println(q1);
+    
+    //prints the students id and their answers
     System.out.println(s1+"\n");
     System.out.println(s2+"\n");
     System.out.println(s3+"\n");
@@ -32,6 +34,7 @@ public static void main(String[] args) {
     System.out.println(s6+"\n");
     System.out.println(s7+"\n");
 
+    //adds the students answer onto the arraylist
     arrList.add(s1.getStudentAnswer());
     arrList.add(s2.getStudentAnswer());
     arrList.add(s3.getStudentAnswer());
@@ -40,6 +43,7 @@ public static void main(String[] args) {
     arrList.add(s6.getStudentAnswer());
     arrList.add(s7.getStudentAnswer());
     
+
     System.out.println(poll.getStat());
     poll.letterCounter();
 

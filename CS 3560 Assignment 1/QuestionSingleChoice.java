@@ -18,6 +18,10 @@ class QuestionSingleChoice{
     }
 
     public String toString (){
-        return "Choose only 1 answer:\n\n" + question + "\nA\n"+"B\n"+"C\n";
-    }
+        int a = 64;
+        numOfChoice = numOfChoice + a;
+        char c = (char)numOfChoice;
+        return "Choose only 1 answer: \n" +"A - " + c + " respectively: \n\n" + this.question + "\n";
+    }    
 }
+
