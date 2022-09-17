@@ -14,44 +14,23 @@ public static void main(String[] args) {
     VotingService poll = new VotingService(0,q1.getNumberOfChoices(),arrList);
     
     //creating the student objects
-    StudentsSC s1 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    StudentsSC s2 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    StudentsSC s3 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    StudentsSC s4 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    StudentsSC s5 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    StudentsSC s6 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    StudentsSC s7 = new StudentsSC(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    
+    Student s1 = new Student(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
+    Student s2 = new Student(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
+    Student studentTest = new Student(generate.IDGenerator(6), generate.multipleAnswerGenerator(q1.getNumberOfChoices()));
 
     System.out.println(q1.printChoices());
     
     //prints the students id and their answers
     System.out.println(s1+"\n");
     System.out.println(s2+"\n");
-    System.out.println(s3+"\n");
-    System.out.println(s4+"\n");
-    System.out.println(s5+"\n");
-    System.out.println(s6+"\n");
-    System.out.println(s7+"\n");
+    System.out.println(studentTest+"\n");
 
     //adds the students answer onto the arraylist
     arrList.add(s1.getStudentAnswer());
     arrList.add(s2.getStudentAnswer());
-    arrList.add(s3.getStudentAnswer());
-    arrList.add(s4.getStudentAnswer());
-    arrList.add(s5.getStudentAnswer());
-    arrList.add(s6.getStudentAnswer());
-    arrList.add(s7.getStudentAnswer());
-    
+    arrList.add(studentTest.getStudentAnswer());
 
     System.out.println(poll.getStat());
     poll.letterCounter();
-
-    //System.out.println(s1.getStudentAnswer());
-    //System.out.println(s1.getStudentAnswer());
-
-
-
-
 }
 }

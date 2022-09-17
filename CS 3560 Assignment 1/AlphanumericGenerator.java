@@ -1,7 +1,7 @@
-import java.util.Random;
+import java.util.*;
 
 public class AlphanumericGenerator{
-    String IDGenerator(int lengthOfID){
+    public String IDGenerator(int lengthOfID){
         String str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder s = new StringBuilder(lengthOfID);
 
@@ -13,13 +13,29 @@ public class AlphanumericGenerator{
     return s.toString();
     }
 
-    String ABCDGeneratorSC (int x){
-        Random r = new Random();
-        char c = (char)(r.nextInt(x) + 'A');
-        String s = Character.toString(c);
-        return s;
+   public String ABCDGeneratorSC (int numberOfChoices){
+        Random rand = new Random();
+        char c = (char)(rand.nextInt(numberOfChoices) + 'A');
+        String string = Character.toString(c);
+        return string;
     }
 
+    public String multipleAnswerGenerator (int numberOfChoices){
+        Random randomNumberOfTimesToGenerate = new Random();
+        int numberOfTimeToGenerate = randomNumberOfTimesToGenerate.nextInt(numberOfChoices-1)+1;
+
+        ArrayList<String> answers = new ArrayList<String>();
+        Random rand = new Random();
+
+        for(int i = 0; i < numberOfTimeToGenerate; i++){
+        char c = (char)(rand.nextInt(numberOfChoices) + 'A');
+        String string = Character.toString(c);
+        answers.add(string);
+        }
+        String listToString = String.join(" ", answers);
+        //this.studentAnswer = listToString;
+        return listToString;
+
     
-}
+}}
 
