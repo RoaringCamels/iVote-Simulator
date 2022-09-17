@@ -41,6 +41,7 @@ public static void main(String[] args) {
     arrList.add(s7.getStudentAnswer());
     
     System.out.println(poll.getStat());
+    poll.letterCounter();
 
     //System.out.println(s1.getStudentAnswer());
     //System.out.println(s1.getStudentAnswer());

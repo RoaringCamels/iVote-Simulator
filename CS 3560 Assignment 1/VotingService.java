@@ -31,7 +31,7 @@ public class VotingService {
         this.stat = stat;
     }
 
-    public void letterCounter(String inputString){
+    public void letterCounter(){
         Map<String, Integer> map = new HashMap<String,Integer>();
 
         for(String i: this.stat){
@@ -40,7 +40,7 @@ public class VotingService {
         }
 
         for(Map.Entry<String, Integer> val:map.entrySet()){
-            System.out.println("Element " + val.getKey() + " " + " was chosen "+ val.getKey() + " times.");
+            System.out.println("Choice " + val.getKey() + " " + " was chosen "+ val.getValue() + " times.");
         }
     }
 
