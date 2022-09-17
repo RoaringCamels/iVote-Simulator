@@ -39,10 +39,18 @@
 
     public String multipleAnswerGenerator (int numberOfChoices){
         Random randomNumberOfTimesToGenerate = new Random();
-        Random randomNumberOfAnswersChosen = new Random();
-        int numberOfTimesToGenerate = 
-        ArrayList<Characters> answers = new ArrayList<Characters>();
-        for(int i = ; i < 0;)
+        Random randomAnswer = new Random();
+
+        //Generates a random number between 1 and numberofChoices. This will be how many times a random answer will be made
+        //the "-1)+1" makes it so that 0 is not included
+        int numberOfTimesToGenerate = randomNumberOfTimesToGenerate.nextInt(numberOfChoices-1)+1;
+        
+        ArrayList<String> answers = new ArrayList<String>(); //create and ArrayList to keep track of answers
+        for(int i = numberOfTimesToGenerate; i != 0; i--){ //will repeat in the amount of numberOfTimeToGenerate
+            char c = (char)(randomAnswer.nextInt(numberOfChoices) + 'A');
+            String string = Character.toString(c);
+            answers.add(string);
+        }
 
 
     }
