@@ -16,7 +16,7 @@ public static void main(String[] args) {
     //creating the student objects
     Student s1 = new Student(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
     Student s2 = new Student(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    Student studentTest = new Student(generate.IDGenerator(6), generate.multipleAnswerGenerator2(q1.getNumberOfChoices()));
+    Student studentTest = new Student(generate.IDGenerator(6), generate.multipleAnswerGenerator(q1.getNumberOfChoices()));
 
     System.out.println(q1.printChoices());
     
@@ -31,6 +31,7 @@ public static void main(String[] args) {
     arrList.add(studentTest.getStudentAnswer());
 
     System.out.println(poll.getStat());
-    poll.letterCounter();
+    //System.out.println(poll.printArrayListToString(arrList));
+    poll.letterCounter2(poll.printArrayListToString(arrList));
 }
 }
