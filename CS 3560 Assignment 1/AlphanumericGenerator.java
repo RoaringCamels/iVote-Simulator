@@ -36,16 +36,5 @@ public class AlphanumericGenerator{
         //String listToString = String.join(" ", answers);
         return singleStringAnswer;    
     }
-
-    public String multipleAnswerGenerator2 (int numberOfChoices){
-        Random random = new Random();
-
-        int limit = random.nextInt(numberOfChoices-1)+1;
-        String answerString = " ";
-        for(int i = 0; i < limit; i++){
-            answerString = answerString + ABCDGeneratorSC(numberOfChoices);
-        }
-        return answerString;
-    }
 }
 

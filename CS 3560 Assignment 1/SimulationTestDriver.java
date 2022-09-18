@@ -31,7 +31,7 @@ public static void main(String[] args) {
     arrList.add(studentTest.getStudentAnswer());
 
     System.out.println(poll.getStat());
-    //System.out.println(poll.printArrayListToString(arrList));
-    poll.letterCounter2(poll.printArrayListToString(arrList));
+    System.out.println(poll.printArrayListToString(arrList));
+    poll.letterCounter(poll.printArrayListToString(arrList));
 }
 }

@@ -35,30 +35,43 @@ public class VotingService {
         return "The poll states that poll type: " + type + "\nWith " + numberOfChoices + " possible choices, all being: " + stat;
     }//end DEFUALT METHODS
 
-    public void letterCounter2(String input){
+    /**
+     * This method converts a String into an array, counts its characters using a HashMap
+     * and returns the occurance of that character
+     * @param inputTotalFinalChoice
+     */
+    public void letterCounter(String inputTotalFinalChoice){
+        //Creating a HashMap containing the char as a key and occurances as the value
         HashMap<Character, Integer> charCountMap = new HashMap<Character, Integer>();
 
-        char[] stringArray = input.toCharArray();
+        //converting the given string to char array
+        char[] stringArray = inputTotalFinalChoice.toCharArray();
 
+        //checking each char of the newly made array
         for (char c:stringArray){
-            if(charCountMap.containsKey(c)){
+            //if char is present in the charCountMap, inrement that char's count by 1
+            if(charCountMap.containsKey(c)){ 
                 charCountMap.put(c, charCountMap.get(c) + 1);
             }
             else {
+                //if char is not present in the charCountMap, put that char into charCountMap with 1 as its value
                 charCountMap.put(c,1);
             }
         }
 
+        //printing the charCountMap
         for(Map.Entry entry:charCountMap.entrySet()){
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
-    }
+    }// end letterCounter
 
+    /**
+     * This method converts ArrayList<String> as a String
+     * @param inputArray
+     * @return inputArray as listString of type String
+     */
     public String printArrayListToString(ArrayList<String> inputArray){       
         String listString = inputArray.stream().map(Object::toString).collect(Collectors.joining(""));
-        ArrayList<String> temp = new ArrayList<String>();
-        temp.add(listString);
-        this.stat = temp;
         return listString;
     }
 }
