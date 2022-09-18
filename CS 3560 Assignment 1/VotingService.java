@@ -6,12 +6,12 @@ public class VotingService {
     private int numberOfChoices;
     private ArrayList<String> stat;
 
+     //-----------------DEFAULT METHODS-----------------
     public VotingService(int type, int numberOfChoices, ArrayList<String> stat){
         this.type = type;
         this.numberOfChoices = numberOfChoices;
         this.stat = stat;
     }
-
     public int getType() {
         return type;
     }
@@ -29,7 +29,7 @@ public class VotingService {
     }
     public void setStat(ArrayList<String> stat) {
         this.stat = stat;
-    }
+    }//end DEFUALT METHODS
 
     public void letterCounter(){
         Map<String, Integer> map = new HashMap<String,Integer>();

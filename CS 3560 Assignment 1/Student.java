@@ -1,14 +1,14 @@
  import java.util.*;
  public class Student {
-    
     private String ID;
     private String studentAnswer;
 
-    //-----------------DEFAULT METHODS-----------------
     public Student (String newID, String newAnswer){
         this.ID = newID;
         this.studentAnswer = newAnswer;
     }
+    
+    //-----------------DEFAULT METHODS-----------------
      public void setID (String newID){
         this.ID = newID;
     }
@@ -24,6 +24,4 @@
     public String toString(){
         return "Student ID: " + ID + "\nChooses answer: " + studentAnswer;
     }// end DEFAULT METHODS
-
-    
-}
+ }

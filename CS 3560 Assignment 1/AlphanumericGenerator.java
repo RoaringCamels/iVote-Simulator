@@ -24,18 +24,28 @@ public class AlphanumericGenerator{
         Random randomNumberOfTimesToGenerate = new Random();
         int numberOfTimeToGenerate = randomNumberOfTimesToGenerate.nextInt(numberOfChoices-1)+1;
 
-        ArrayList<String> answers = new ArrayList<String>();
+        StringBuilder strbuild = new StringBuilder();
         Random rand = new Random();
 
         for(int i = 0; i < numberOfTimeToGenerate; i++){
         char c = (char)(rand.nextInt(numberOfChoices) + 'A');
         String string = Character.toString(c);
-        answers.add(string);
+        strbuild.append(string);
         }
-        String listToString = String.join(" ", answers);
-        //this.studentAnswer = listToString;
-        return listToString;
+        String singleStringAnswer = strbuild.toString();
+        //String listToString = String.join(" ", answers);
+        return singleStringAnswer;    
+    }
 
-    
-}}
+    public String multipleAnswerGenerator2 (int numberOfChoices){
+        Random random = new Random();
+
+        int limit = random.nextInt(numberOfChoices-1)+1;
+        String answerString = "";
+        for(int i = 0; i < limit; i++){
+            answerString = answerString + ABCDGeneratorSC(numberOfChoices);
+        }
+        return answerString;
+    }
+}
 

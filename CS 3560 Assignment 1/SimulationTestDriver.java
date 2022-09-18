@@ -16,7 +16,7 @@ public static void main(String[] args) {
     //creating the student objects
     Student s1 = new Student(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
     Student s2 = new Student(generate.IDGenerator(5),generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-    Student studentTest = new Student(generate.IDGenerator(6), generate.multipleAnswerGenerator(q1.getNumberOfChoices()));
+    Student studentTest = new Student(generate.IDGenerator(6), generate.multipleAnswerGenerator2(q1.getNumberOfChoices()));
 
     System.out.println(q1.printChoices());
     
@@ -24,7 +24,7 @@ public static void main(String[] args) {
     System.out.println(s1+"\n");
     System.out.println(s2+"\n");
     System.out.println(studentTest+"\n");
-
+    
     //adds the students answer onto the arraylist
     arrList.add(s1.getStudentAnswer());
     arrList.add(s2.getStudentAnswer());
