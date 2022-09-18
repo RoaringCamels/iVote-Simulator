@@ -1,5 +1,4 @@
- import java.util.*;
- public class Student {
+  public class Student {
     private String ID;
     private String studentAnswer;
 
@@ -7,7 +6,7 @@
         this.ID = newID;
         this.studentAnswer = newAnswer;
     }
-    
+
     //-----------------DEFAULT METHODS-----------------
      public void setID (String newID){
         this.ID = newID;

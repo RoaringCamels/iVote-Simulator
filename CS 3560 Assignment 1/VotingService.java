@@ -73,5 +73,5 @@ public class VotingService {
     public String printArrayListToString(ArrayList<String> inputArray){       
         String listString = inputArray.stream().map(Object::toString).collect(Collectors.joining(""));
         return listString;
-    }
+    }//end printArrayListToString
 }

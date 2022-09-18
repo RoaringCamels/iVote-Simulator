@@ -1,7 +1,7 @@
 /**
  * The Question class can be type 0(Single choice) or type 1(Multiple choice)
- * Contains a String question that is being asked
- * Contains an integer numberOfChoices
+ * Contains a String question that is being asked (Can be customized)
+ * Contains an integer numberOfChoices (Can be customized)
  */
 
 class Question{
@@ -38,12 +38,15 @@ class Question{
         return "This quesion is type: " + this.type + "\nQuestion: " + this.question + "\nWith " + this.numberOfChoices + " number of choices.";
     }// end DEFAULT METHODS
 
-
+    /**
+     * This method returns the possible choice letters depending on numberOfChoices
+     * @return 
+     */
     public String printChoices (){
         int a = 64;
         numberOfChoices = numberOfChoices + a;
         char c = (char)numberOfChoices;
         return "Choose only 1 answer: \n" + this.question + "\n" +"A - " + c + " respectively: \n\n";
-    }    
+    }// end printChoices
 }
 

@@ -1,8 +1,9 @@
 import java.util.*;
 public class SimulationTestDriver {
-
-    
-
+/**
+ * This class is the TestDriver 
+ * @param args
+ */
 public static void main(String[] args) {
     AlphanumericGenerator generate = new AlphanumericGenerator(); //object that randomly creates the ID and answers
     ArrayList<String> arrList = new ArrayList<String>(); //arraylist object to input for VotingService
