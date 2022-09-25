@@ -7,36 +7,32 @@ public class SimulationTestDriver {
      * @param args
      */
     public static void main(String[] args) {
-        AlphanumericGenerator generate = new AlphanumericGenerator(); // object that randomly creates the ID and answers
-        ArrayList<String> arrList = new ArrayList<String>(); // arraylist object to input for VotingService
 
         // Question with number of choices
-        Question q1 = new Question(0, "Sushi, KBBQ, Buffet, Blank, Blank and Blank?", 6);
+        Question q1 = new Question(1, "Sushi, KBBQ, Buffet, Blank, Blank and Blank?", 6);
 
-        // object that keeps track of the stats
-        VotingService poll = new VotingService(0, q1.getNumberOfChoices(), arrList);
+        // objects that keeps track of the stats
+        ArrayList<String> stats = new ArrayList<String>();
+        VotingService poll = new VotingService(q1.getType(), q1.getNumberOfChoices(), stats);
 
         // creating the student objects
-        Student s1 = new Student(generate.IDGenerator(5), generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-        Student s2 = new Student(generate.IDGenerator(5), generate.ABCDGeneratorSC(q1.getNumberOfChoices()));
-        Student studentTest = new Student(generate.IDGenerator(6),
-                generate.multipleAnswerGenerator(q1.getNumberOfChoices()));
-
-        System.out.println(q1.printChoices());
+        Student student1 = new Student(5, q1.getType(), q1.getNumberOfChoices());
+        Student student2 = new Student(10, q1.getType(), q1.getNumberOfChoices());
+        Student student3 = new Student(20, q1.getType(), q1.getNumberOfChoices());
 
         // prints the students id and their answers
-        System.out.println(s1 + "\n");
-        System.out.println(s2 + "\n");
-        System.out.println(studentTest + "\n");
-        s1.setStudentAnswer("A");
+        System.out.print(student1 + "\n");
+        System.out.print(student2 + "\n");
+        System.out.print(student3 + "\n");
 
         // adds the students answer onto the arraylist
-        arrList.add(s1.getStudentAnswer());
-        arrList.add(s2.getStudentAnswer());
-        arrList.add(studentTest.getStudentAnswer());
+        stats.add(student1.getStudentAnswer());
+        stats.add(student2.getStudentAnswer());
+        stats.add(student3.getStudentAnswer());
 
-        System.out.println(poll.getStat());
-        System.out.println(poll.printArrayListToString(arrList));
-        poll.letterCounter(poll.printArrayListToString(arrList));
+        System.out.println(stats);
+
+        // print the poll - total amount of the letters that were picked
+        poll.letterCounter(stats);
     }
 }

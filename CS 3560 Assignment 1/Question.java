@@ -46,14 +46,21 @@ class Question {
     }// end DEFAULT METHODS
 
     /**
-     * This method returns the possible choice letters depending on numberOfChoices
+     * This method returns the possible choice letters depending on the Question
+     * type
+     * and Number of choices
      * 
-     * @return
+     * @return Possible choices and type of question
      */
-    public String printChoices() {
+    public String printChoiceSC(int questionType) {
+        // ascii conversion
         int a = 64;
         numberOfChoices = numberOfChoices + a;
         char c = (char) numberOfChoices;
-        return "Choose only 1 answer: \n" + this.InputQuestion + "\n" + "A - " + c + " respectively: \n\n";
+
+        if (questionType == 0) {
+            return "Choose only 1 answer: \n" + this.InputQuestion + "\n" + "A - " + c + " respectively: \n\n";
+        } else
+            return "Choose all that apply: \n" + this.InputQuestion + "\n" + "A - " + c + " respectively: \n\n";
     }// end printChoices
 }

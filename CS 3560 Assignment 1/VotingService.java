@@ -47,9 +47,11 @@ public class VotingService {
      * HashMap
      * and returns the occurance of that character
      * 
-     * @param inputTotalFinalChoice
+     * @param inputTotalFinalChoice an ArrayList<String> collection of all answers
+     *                              from the Students
      */
-    public void letterCounter(String inputTotalFinalChoice) {
+    public void letterCounter(ArrayList<String> inputArray) {
+        String inputTotalFinalChoice = printArrayListToString(inputArray);
         // Creating a HashMap containing the char as a key and occurances as the value
         HashMap<Character, Integer> charCountMap = new HashMap<Character, Integer>();
 
@@ -80,7 +82,7 @@ public class VotingService {
      * @param inputArray
      * @return inputArray as listString of type String
      */
-    public String printArrayListToString(ArrayList<String> inputArray) {
+    private String printArrayListToString(ArrayList<String> inputArray) {
         String listString = inputArray.stream().map(Object::toString).collect(Collectors.joining(""));
         return listString;
     }// end printArrayListToString
