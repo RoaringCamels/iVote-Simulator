@@ -123,8 +123,8 @@ public class Student {
         String singleStringAnswer = strbuild.toString();// stringBuilder is a type itself but the conversion is easy
 
         // as mentioned earlier, we must consider no repetition
-        // the easiest way is using a character array, traversing it and adding it onto
-        // another StringBuilder (that i can think of)
+        // we use a character array, traversing it and adding it onto
+        // another StringBuilder 
         char[] chars = singleStringAnswer.toCharArray(); // convert the string we created earlier into an array of
                                                          // characters
         Set<Character> charSet = new LinkedHashSet<Character>();// creating a linked HashSet
